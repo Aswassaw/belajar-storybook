@@ -1,4 +1,5 @@
 import React from "react";
+import Center from "../utilities/Center/Center";
 import Button from "./Button";
 
 export default {
@@ -7,6 +8,7 @@ export default {
   args: {
     children: "Default Children",
   },
+  decorators: [(story) => <Center>{story()}</Center>],
 };
 
 // Menggunakan stories biasa
