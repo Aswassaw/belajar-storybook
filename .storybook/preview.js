@@ -1,6 +1,7 @@
 // import Center from "../components/stories/utilities/Center/Center";
 import { addDecorator } from "@storybook/react";
 import { withConsole } from "@storybook/addon-console";
+import { withKnobs } from "@storybook/addon-knobs";
 
 export const parameters = {
   actions: { argTypesRegex: "^on[A-Z].*" },

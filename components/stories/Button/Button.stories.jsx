@@ -2,6 +2,7 @@ import React from "react";
 import Center from "../utilities/Center/Center";
 import Button from "./Button";
 import { action, actions } from "@storybook/addon-actions";
+import { text, boolean } from "@storybook/addon-knobs";
 
 export default {
   title: "Form/Button",
@@ -50,4 +51,10 @@ SecondaryA.args = {
 
 export const Log = () => (
   <Button onClick={() => console.log("Button Clicked")}>Console Log</Button>
+);
+
+export const Knobs = () => (
+  <Button disabled={boolean("Disabled", false)}>
+    {text("Label", "Button Label")}
+  </Button>
 );
