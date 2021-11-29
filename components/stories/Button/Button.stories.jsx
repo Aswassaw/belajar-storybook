@@ -24,6 +24,9 @@ export const PrimaryA = Template.bind({});
 PrimaryA.args = {
   variant: "primary",
   children: "Primary Args",
+  // argTypes: {
+  //   onClick: { action: "clicked" }
+  // },
 };
 PrimaryA.storyName = "Primary Args";
 

@@ -6,6 +6,7 @@ module.exports = {
   addons: [
     "@storybook/addon-links",
     "@storybook/addon-essentials",
+    "@storybook/addon-viewport",
     "storybook-css-modules-preset",
   ],
   framework: "@storybook/react",
