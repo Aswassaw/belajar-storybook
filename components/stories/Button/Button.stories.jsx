@@ -1,6 +1,7 @@
 import React from "react";
 import Center from "../utilities/Center/Center";
 import Button from "./Button";
+import { action, actions } from "@storybook/addon-actions";
 
 export default {
   title: "Form/Button",
@@ -12,8 +13,16 @@ export default {
 };
 
 // Menggunakan stories biasa
-export const Primary = () => <Button variant='primary'>Primary</Button>;
-export const Secondary = () => <Button variant='secondary'>Secondary</Button>;
+export const Primary = () => (
+  <Button onClick={action("Click Handler")} variant='primary'>
+    Primary
+  </Button>
+);
+export const Secondary = () => (
+  <Button {...actions("onClick", "onMouseOver")} variant='secondary'>
+    Secondary
+  </Button>
+);
 export const Success = () => <Button variant='success'>Success</Button>;
 export const Danger = () => <Button variant='danger'>Danger</Button>;
 
@@ -24,9 +33,6 @@ export const PrimaryA = Template.bind({});
 PrimaryA.args = {
   variant: "primary",
   children: "Primary Args",
-  // argTypes: {
-  //   onClick: { action: "clicked" }
-  // },
 };
 PrimaryA.storyName = "Primary Args";
 
@@ -41,3 +47,7 @@ SecondaryA.args = {
   variant: "secondary",
   // children: "Secondary Args",
 };
+
+export const Log = () => (
+  <Button onClick={() => console.log("Button Clicked")}>Console Log</Button>
+);
