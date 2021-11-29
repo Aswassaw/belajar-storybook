@@ -58,3 +58,9 @@ export const Knobs = () => (
     {text("Label", "Button Label")}
   </Button>
 );
+
+export const Env = () => (
+  <Button onClick={() => console.log(`${process.env.STORYBOOK_THEME}`)}>
+    ENV
+  </Button>
+);
